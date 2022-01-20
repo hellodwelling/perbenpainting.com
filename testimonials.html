@@ -8,25 +8,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Perben Painting and Landscape, LLC" property="og:title">
+    <meta content="Perben Painting and Landscape" property="og:title">
 
     
-        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/TWLDYMCVX3AYHR02WCBL2HMIQTLFANRTLGP81VPZ.jpeg" property="og:image">
-        <meta content="Perben Painting and Landscape, LLC" property="twitter:title">
-        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/TWLDYMCVX3AYHR02WCBL2HMIQTLFANRTLGP81VPZ.jpeg" property="twitter:image">
-        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/TWLDYMCVX3AYHR02WCBL2HMIQTLFANRTLGP81VPZ.jpeg" rel="shortcut icon" type="image/x-icon">
-        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/TWLDYMCVX3AYHR02WCBL2HMIQTLFANRTLGP81VPZ.jpeg" rel="apple-touch-icon">     
+        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" property="og:image">
+        <meta content="Perben Painting and Landscape" property="twitter:title">
+        <meta content="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" property="twitter:image">
+        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" rel="shortcut icon" type="image/x-icon">
+        <link href="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" rel="apple-touch-icon">     
     
     <title>
          
-            CITY, STATE - The Finest Painting | Perben Painting and Landscape, LLC
+            Burlington, WA - The Finest Painting | Perben Painting and Landscape
         
     </title>
     <meta name="description" content="Schedule your free quote today! Proudly serving 
          
-            CITY, STATE & surrounding areas.
+            Burlington, WA & surrounding areas.
          
-        Perben Painting and Landscape, LLC is CITY&#x27;s most trusted Painting service. service. We are a customer-first company and you are always a priority. Our team …"
+        Perben Painting and Landscape is Burlington&#x27;s most trusted painting and landscaping service. We are a customer-first company and you are always a priority. Our team …"
     >
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -52,7 +52,7 @@
   <div x-data="{ open: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
     <div class="py-4 flex flex-row items-center justify-between">
       
-        <a href= " index "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TWLDYMCVX3AYHR02WCBL2HMIQTLFANRTLGP81VPZ.jpeg" alt="Perben Painting and Landscape, LLC logo"> </a>
+        <a href= " index "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" alt="Perben Painting and Landscape logo"> </a>
       
       <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -77,11 +77,40 @@
  
       
         
-<a 
-    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="gallery">Our Best Work
-</a>
- 
+
+<div id='mobile-dropdown-parent' onclick='toggleDropDownMobile()' class="px-4 py-2 mt-2 text-lg font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 group flex flex-col relative ">
+    <div> Galleries
+        <i class="fa fa-caret-down"></i>
+    </div>
+    <!-- for desktop -->
+    <div class="hidden lg:group-hover:opacity-100 lg:opacity-0 transition duration-500 ease-in-out lg:flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Interior-Painting"> Interior Painting </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Landscaping"> Landscaping </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Exterior-Painting"> Exterior Painting </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Christmas-Lights"> Christmas Lights </a>
+        
+    </div> 
+    <!-- for mobile b/c can't enable tailwind variants w/o postcss build -->
+    <div id='mobile-dropdown' class="lg:hidden hidden transition duration-500 ease-in-out flex flex-col bg-white z-50 w-full min-w-max absolute top-10 shadow-lg rounded-md px-4 py-4 space-y-3">
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Interior-Painting"> Interior Painting </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Landscaping"> Landscaping </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Exterior-Painting"> Exterior Painting </a>
+        
+            <a class="transparent rounded-lg text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="gallery-Christmas-Lights"> Christmas Lights </a>
+        
+    </div> 
+
+</div>
+
+
+  
       
            
       
@@ -117,9 +146,9 @@
         <div class="block">
         <button type="button" 
          
-            onMouseOver="this.style.backgroundColor='#111827'; this.style.color='#9ca3af' "
-            onMouseOut="this.style.backgroundColor='#9ca3af'; this.style.color='white'"
-            style="background-color:#9ca3af; color:white"               
+            onMouseOver="this.style.backgroundColor='#335b39'; this.style.color='#58ff4e' "
+            onMouseOut="this.style.backgroundColor='#58ff4e'; this.style.color='white'"
+            style="background-color:#58ff4e; color:white"               
 
          
         onclick= "send_sms(0, 'Perben-Painting-and-Landscape,-LLC')" 
@@ -144,9 +173,9 @@
         
 <button 
  
-    onMouseOver="this.style.backgroundColor='white'; this.style.color='#111827' "
-    onMouseOut="this.style.backgroundColor='#9ca3af'; this.style.color='white'"
-    style="background-color:#9ca3af; color:white"               
+    onMouseOver="this.style.backgroundColor='white'; this.style.color='#335b39' "
+    onMouseOut="this.style.backgroundColor='#58ff4e'; this.style.color='white'"
+    style="background-color:#58ff4e; color:white"               
 
  id="side-button" type="button" x-on:click.prevent="open = true" class=" 
   
@@ -173,9 +202,9 @@
         <div class="block">
         <button type="button" 
          
-            onMouseOver="this.style.backgroundColor='#111827'; this.style.color='#9ca3af' "
-            onMouseOut="this.style.backgroundColor='#9ca3af'; this.style.color='white'"
-            style="background-color:#9ca3af; color:white"               
+            onMouseOver="this.style.backgroundColor='#335b39'; this.style.color='#58ff4e' "
+            onMouseOut="this.style.backgroundColor='#58ff4e'; this.style.color='white'"
+            style="background-color:#58ff4e; color:white"               
 
          
         onclick= "send_sms(2, 'Perben-Painting-and-Landscape,-LLC')" 
@@ -187,11 +216,11 @@
     </div>
 
     
-    <div  style= "background-color:#111827"  id= "testimonials" class=" mt-24  flex items-center justify-center  bg-#111827-900 text-white  py-20 min-w-screen px-4">
+    <div  style= "background-color:#335b39"  id= "testimonials" class=" mt-24  flex items-center justify-center  bg-#111827-900 text-white  py-20 min-w-screen px-4">
         <div class="px-16 ">
             <div class="container flex flex-col items-center lg:items-startmx-auto lg:items-center">
                 <div class = "sm:mb-4 md:mb-0">
-                <h2  style= "color:#9ca3af"  class="relative flex  text-#9ca3af-400 text-center sm:justify-center sm:mb-8 md:justify-start w-full text-lg font-bold tracking-wider uppercase lg:justify-center lg:items-center mb-10">Don&#x27;t just take our word for it</h2>
+                <h2  style= "color:#58ff4e"  class="relative flex  text-#9ca3af-400 text-center sm:justify-center sm:mb-8 md:justify-start w-full text-lg font-bold tracking-wider uppercase lg:justify-center lg:items-center mb-10">Don&#x27;t just take our word for it</h2>
                 </div>
 
 
@@ -210,68 +239,8 @@
                     <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  "></h3>
-                            <h3 class=" text-white ">CITY, STATE  , No services to show  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Lizzie Johnson  recommends Perben Painting and Landscape, LLC.<br>3 May 2021<br> <br> · "</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  "></h3>
-                            <h3 class=" text-white ">CITY, STATE  , No services to show  </h3>
-                            <div class="flex flex-row items-start ">
-                                
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
-                                
-                                
-                            </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Mark L Mcelroy  recommends Perben Painting and Landscape, LLC.<br>20 February 2021<br> <br> · "</blockquote>                           
-                        </div>
-                    </div>
-                    
-                    </div>
-                    
-
-                    
-                    
-                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
-                    <div class="flex items-center lg:items-start ">
-                        
-                        <div class="flex flex-col justify-start items-center lg:items-start ">
                             <h3 class="font-bold  text-white  ">Stefanie McElroy</h3>
-                            <h3 class=" text-white ">CITY, STATE  , No services to show  </h3>
+                            <h3 class=" text-white ">Oak Harbor, WA  , Interior Painting  </h3>
                             <div class="flex flex-row items-start ">
                                 
                                 
@@ -287,7 +256,7 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Stefanie McElroy  recommends Perben Painting and Landscape, LLC.<br>20 February 2021<br> <br> · "</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Perben Painting and Landscaping came out to my home to install French doors and a slider door amongst other odds and ends we handed over to them to finish up for us. I can tell you they work very hard and their communication with one another was very professional. I loved how they first discussed how they were gonna tackle a ceiling cut out before doing it. That made me feel confident they knew what they were doing. I would recommend these guys 💯 no questions! Thanks guys😁😁much appreciated 😊"</blockquote>                           
                         </div>
                     </div>
                     
@@ -300,8 +269,8 @@
                     <div class="flex items-center lg:items-start ">
                         
                         <div class="flex flex-col justify-start items-center lg:items-start ">
-                            <h3 class="font-bold  text-white  "></h3>
-                            <h3 class=" text-white ">CITY, STATE  , No services to show  </h3>
+                            <h3 class="font-bold  text-white  ">Lizzie Johnson</h3>
+                            <h3 class=" text-white ">Oak Harbor, WA  , Other Painting Services  </h3>
                             <div class="flex flex-row items-start ">
                                 
                                 
@@ -317,7 +286,37 @@
                                 
                                 
                             </div>
-                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Marylynn Ayers  recommends Perben Painting and Landscape, LLC.<br>28 January 2021<br> <br> · "</blockquote>                           
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Perben Painting and Landscaping came out to my house to prep an old walkway into a garden area and they did a great job!  They were great to communicate with and were quick to come give a quote and get the job done.  Would recommend to others!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+                    
+
+                    
+                    
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Mark L McElroy</h3>
+                            <h3 class=" text-white ">Oak Harbor, WA  , Other Painting Services  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Awesome job. Very professional. I had them replace 2 doors and miscellaneous other jobs. Love the work. 5/5"</blockquote>                           
                         </div>
                     </div>
                     
@@ -342,28 +341,28 @@
     </div>
     
 
-<section  style= "background-color:#111827"   class="py-10 bg-#111827-900">
+<section  style= "background-color:#335b39"   class="py-10 bg-#111827-900">
     
         <div class="flex flex-col justify-around text-center md:flex-row">
             <p class="order-last text-sm leading-tight text-#9ca3af-400 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
              
             <ul class="flex flex-row flex-wrap text-center justify-center pb-3 lg:-ml-4 lg:-mr-4 text-sm">
-                <li> <a  style= "color:#9ca3af"  href="#about" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">About Us</a> </li>
+                <li> <a  style= "color:#58ff4e"  href="#about" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">About Us</a> </li>
                 
-                <li> <a   style= "color:#9ca3af" href="#services" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">Our Services</a> </li>
-                
-                
-                <li> <a style= "color:#9ca3af"   href="#our-work" class=" px-2 md:px-4 text-#9ca3af-400 hover:text-white">Our Best Work</a> </li>
+                <li> <a   style= "color:#58ff4e" href="#services" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">Our Services</a> </li>
                 
                 
-                <li> <a  style= "color:#9ca3af"  href="#testimonials" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">Testimonials &amp; Reviews</a></li>
+                <li> <a style= "color:#58ff4e"   href="#our-work" class=" px-2 md:px-4 text-#9ca3af-400 hover:text-white">Our Best Work</a> </li>
                 
                 
-                <li> <a  style= "color:#9ca3af"  href="#faqs" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">FAQs</a></li>
+                <li> <a  style= "color:#58ff4e"  href="#testimonials" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">Testimonials &amp; Reviews</a></li>
+                
+                
+                <li> <a  style= "color:#58ff4e"  href="#faqs" class="px-2 md:px-4 text-#9ca3af-400 hover:text-white">FAQs</a></li>
                 
                 
                 
-                <li> <a  style= "color:#9ca3af"  href="#find-us" class=" px-2 md:px-4 text-#9ca3af-400 hover:text-white">Service Areas</a></li>
+                <li> <a  style= "color:#58ff4e"  href="#find-us" class=" px-2 md:px-4 text-#9ca3af-400 hover:text-white">Service Areas</a></li>
                 
             </ul>
         </div>
