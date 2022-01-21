@@ -1108,15 +1108,52 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 1,
+        amountOfImages: 4,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
-        }"
-            x-init="loop"
-            class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-        >
+    }"
+        x-init="loop"
+        class="relative flex w-full overflow-x-hidden h-72 md:h-96 lg:h-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
+    >
         <!-- Transition Wrapper 1 -->
+        <!-- <div
+            class="absolute inset-0"
+            x-show="activeImage === 1"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ec07b826-2575-4a5e-be0f-13be1939a334.jpeg"
+                alt=""
+            />
+        </div> -->
+        <!-- Transition Wrapper 2 -->
+        <!-- TODO: Add x-cloak to all transition wrappers exept the first one to avoid a flashing on load -->
+        <!-- <div
+            x-cloak
+            class="absolute inset-0"
+            x-show="activeImage === 2"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80"
+                alt=""
+            />
+        </div> -->
+
+        
         <div
             class="absolute inset-0"
             x-show="activeImage === 1"
@@ -1127,18 +1164,65 @@
             x-transition:leave-start="transform"
             x-transition:leave-end="transform -translate-x-full"
         >
-        
-            
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/434ZSC208DWYD9HWMOPBBUG7EZR7JKVEP3MAJA25.jpeg"
-                alt=""
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ec07b826-2575-4a5e-be0f-13be1939a334.jpeg"
+                alt="-image"
             />
-                <!-- <img src="https://landing-page-app-hero-images.s3.amazonaws.com/media/434ZSC208DWYD9HWMOPBBUG7EZR7JKVEP3MAJA25.jpeg"   alt="Hero Image"  class="object-cover w-full lg:absolute h-80 lg:h-full"> -->
-                
-        
-            
         </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 2"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/9a5da94c-6a21-4eac-a871-5e1fac01a3c1.jpeg"
+                alt="-image"
+            />
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 3"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/0a1c5772-0717-4503-9964-cd36d4afffbc.jpeg"
+                alt="-image"
+            />
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 4"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/5e1ed655-4835-4eb7-be22-ba1216990282.jpeg"
+                alt="-image"
+            />
+        </div>
+        
+        <!-- More images here -->
     </div>
     
 </div>
@@ -3614,7 +3698,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-gray-400 rounded  focus:outline-none focus-visible:ring-2 ring-primary"
-                                aria-controls="20299"
+                                aria-controls="20302"
                                 :aria-expanded="expanded"
                             >
                                 <span class="font-medium text-gray-900">What&#x27;s the best way to reach you?</span>
@@ -3634,7 +3718,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20299">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20302">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500">Give us a call or send us a text at +1 360-544-2770. Thanks!</p>
                         </dd>
@@ -3655,7 +3739,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-gray-400 rounded  focus:outline-none focus-visible:ring-2 ring-primary"
-                                aria-controls="20300"
+                                aria-controls="20303"
                                 :aria-expanded="expanded"
                             >
                                 <span class="font-medium text-gray-900">Do you provide free estimates?</span>
@@ -3675,7 +3759,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20300">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20303">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500">Yes, we&#x27;ll always estimate the job for free. Just give us a call to get started.</p>
                         </dd>
@@ -3696,7 +3780,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-gray-400 rounded  focus:outline-none focus-visible:ring-2 ring-primary"
-                                aria-controls="20301"
+                                aria-controls="20304"
                                 :aria-expanded="expanded"
                             >
                                 <span class="font-medium text-gray-900">How are you different?</span>
@@ -3716,7 +3800,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20301">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="20304">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-500">We&#x27;re a customer-first company that will do whatever it takes to make sure the job is well done.</p>
                         </dd>
@@ -4378,142 +4462,142 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90082"
-                                            name="90082"
+                                            id="contact-service-90096"
+                                            name="90096"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90082" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                        <label for="contact-label-service-90096" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90083"
-                                            name="90083"
+                                            id="contact-service-90097"
+                                            name="90097"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90083" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                        <label for="contact-label-service-90097" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90084"
-                                            name="90084"
+                                            id="contact-service-90098"
+                                            name="90098"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90084" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                        <label for="contact-label-service-90098" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90085"
-                                            name="90085"
+                                            id="contact-service-90099"
+                                            name="90099"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90085" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                        <label for="contact-label-service-90099" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90086"
-                                            name="90086"
+                                            id="contact-service-90100"
+                                            name="90100"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90086" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                        <label for="contact-label-service-90100" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90087"
-                                            name="90087"
+                                            id="contact-service-90101"
+                                            name="90101"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90087" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
+                                        <label for="contact-label-service-90101" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90088"
-                                            name="90088"
+                                            id="contact-service-90102"
+                                            name="90102"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90088" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
+                                        <label for="contact-label-service-90102" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90089"
-                                            name="90089"
+                                            id="contact-service-90103"
+                                            name="90103"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90089" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
+                                        <label for="contact-label-service-90103" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90090"
-                                            name="90090"
+                                            id="contact-service-90104"
+                                            name="90104"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90090" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
+                                        <label for="contact-label-service-90104" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90091"
-                                            name="90091"
+                                            id="contact-service-90105"
+                                            name="90105"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90091" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
+                                        <label for="contact-label-service-90105" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90092"
-                                            name="90092"
+                                            id="contact-service-90106"
+                                            name="90106"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90092" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
+                                        <label for="contact-label-service-90106" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90093"
-                                            name="90093"
+                                            id="contact-service-90107"
+                                            name="90107"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90093" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
+                                        <label for="contact-label-service-90107" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90094"
-                                            name="90094"
+                                            id="contact-service-90108"
+                                            name="90108"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90094" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
+                                        <label for="contact-label-service-90108" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90095"
-                                            name="90095"
+                                            id="contact-service-90109"
+                                            name="90109"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90095" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
+                                        <label for="contact-label-service-90109" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
                                     </div>
                                 
                             </div>
