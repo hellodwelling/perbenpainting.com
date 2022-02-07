@@ -15,7 +15,8 @@
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"> -->
         <link rel="stylesheet" href="https://prophone-templates.vercel.app/assets/output.css">
         
-        <!-- <link rel="stylesheet"  type="text/css"  href="/staticfiles/landing_page_gen/tailwind.css"> -->
+        
+        <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/output.css" rel="stylesheet">
         <!-- Include Scripts -->
         <!-- Header Component, only used for presentation -->
 
@@ -31,10 +32,7 @@
 <script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>
 <!-- Focus Visible Polyfill -->
 <script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>
-        <!-- <link rel="stylesheet" href="/staticfiles/landing_page_gen/style.css" type="text/css"> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- 
-        <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script>  -->
 
         <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script> -->
         <style>
@@ -222,7 +220,7 @@
                             class="flex items-center justify-center flex-shrink-0 pr-5 bg-white rounded-md  focus:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
                         >
                             <img
-                                class="w-[80px] h-[80px] xl:w-[150px] xl:h-[150px] scale-100 origin-left transition"
+                                class="h-[80px] xl:h-[150px] scale-100 origin-left transition w-auto"
                                 src="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg"
                                 alt="Brand Logo"
                             />
@@ -741,7 +739,7 @@
                             href="/"
                             class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
                         >
-                            <img class="w-[80px] h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" alt="Brand Logo" />
+                            <img class="h-[80px]" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/45a47ca3-a128-485b-a035-5e03f8a3c367.jpeg" alt="Brand Logo" />
                         </a>
                     </div>
                     <div class="-mr-2">
@@ -1093,7 +1091,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 16,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1108,262 +1106,6 @@
     }"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a8d2660c-799c-4830-bf2a-bb291fc2c7bc.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c1f2e8ea-7569-4bb5-8c34-5e41f35e7dca.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4a112aea-b6cb-467a-8537-aa7a8600ac1e.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/34166fef-6b14-43b4-9a43-4a2019576864.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc393fd9-8034-479a-a461-81dff67dc6ac.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/97ef95f6-813e-4fe0-b639-f8a3eb7f5f3c.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/faadde54-8c75-4bb0-808c-6efb17618111.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8e0033e5-b106-4d68-abf7-8434f3dad743.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fbf567d3-32d8-4c6e-b137-7d5caeb39cd5.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/36579b47-452f-4e7f-acf1-b6ac9cd00c8f.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8eca0c45-78bd-4e64-83f2-1ea2f7f70eda.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ab4c3476-fcf6-4056-ad2b-494ab4f1855a.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c4d4f636-31db-4141-bf17-cd81530f5d08.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/cba906c6-7496-4798-8822-dd79f39f2a2b.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c722ca18-ae83-4680-bf68-8fdd64e2947f.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f0af1133-c14a-4f6b-bab4-6d9b55c51008.jpeg" alt="" />
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
         
     </ul>
 
@@ -1412,102 +1154,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-full">
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a8d2660c-799c-4830-bf2a-bb291fc2c7bc.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 1">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c1f2e8ea-7569-4bb5-8c34-5e41f35e7dca.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 2">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/4a112aea-b6cb-467a-8537-aa7a8600ac1e.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 3">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/34166fef-6b14-43b4-9a43-4a2019576864.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 4">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc393fd9-8034-479a-a461-81dff67dc6ac.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 5">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/97ef95f6-813e-4fe0-b639-f8a3eb7f5f3c.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 6">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/faadde54-8c75-4bb0-808c-6efb17618111.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 7">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8e0033e5-b106-4d68-abf7-8434f3dad743.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 8">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fbf567d3-32d8-4c6e-b137-7d5caeb39cd5.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 9">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/36579b47-452f-4e7f-acf1-b6ac9cd00c8f.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 10">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/8eca0c45-78bd-4e64-83f2-1ea2f7f70eda.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 11">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ab4c3476-fcf6-4056-ad2b-494ab4f1855a.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 12">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c4d4f636-31db-4141-bf17-cd81530f5d08.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 13">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/cba906c6-7496-4798-8822-dd79f39f2a2b.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 14">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/c722ca18-ae83-4680-bf68-8fdd64e2947f.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
-                                
-                                    <!-- Transition Wrapper 1 -->
-                                    <li class="flex flex-col" x-show="activeImage === 15">
-                                        <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f0af1133-c14a-4f6b-bab4-6d9b55c51008.jpeg" alt="placeholder image" />
-                                        <p lorem="1" class="mt-3 text-gray-500"></p>
-                                    </li>
                                 
                             </ul>
 
@@ -1654,27 +1300,44 @@
                                     >Home</a
                                 >
                             </li>
+                            
+                                
+                                <li>
+                                    <a
+                                        href="#gallery"
+                                        class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                        >Gallery</a
+                                    >
+                                </li>
+                                
+                            
+                            
                             <li>
                                 <a
-                                    href="#"
-                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
-                                    >Gallery</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
+                                    href="reviews"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Reviews</a
                                 >
                             </li>
+                            
+                            
                             <li>
                                 <a
-                                    href="#"
+                                    href="team"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Team</a
                                 >
                             </li>
+                            
+                            
+                            <li>
+                                <a
+                                    href="jobs"
+                                    class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
+                                    >Jobs</a
+                                >
+                            </li>
+                            
                         </ul>
                     </div>
                     <!-- Services Links -->
@@ -1684,7 +1347,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Interior-Painting"
+                                    href="service-Interior-Painting"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Interior Painting</a
                                 >
@@ -1692,7 +1355,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Exterior-Painting"
+                                    href="service-Exterior-Painting"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Exterior Painting</a
                                 >
@@ -1700,7 +1363,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Kitchen-and-Cabinet-Refinishing"
+                                    href="service-Kitchen-and-Cabinet-Refinishing"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Kitchen and Cabinet Refinishing</a
                                 >
@@ -1708,7 +1371,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Drywall-and-Plastering"
+                                    href="service-Drywall-and-Plastering"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Drywall and Plastering</a
                                 >
@@ -1716,7 +1379,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Other-Painting-Services"
+                                    href="service-Other-Painting-Services"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Other Painting Services</a
                                 >
@@ -1724,7 +1387,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Landscaping"
+                                    href="service-Landscaping"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Landscaping</a
                                 >
@@ -1732,7 +1395,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Roof-Cleaning"
+                                    href="service-Roof-Cleaning"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Roof Cleaning</a
                                 >
@@ -1740,7 +1403,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Gutter-Cleaning"
+                                    href="service-Gutter-Cleaning"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Gutter Cleaning</a
                                 >
@@ -1748,7 +1411,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Fence-Installation"
+                                    href="service-Fence-Installation"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Fence Installation</a
                                 >
@@ -1756,7 +1419,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Mulch-Removal-and-Installation"
+                                    href="service-Mulch-Removal-and-Installation"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Mulch Removal and Installation</a
                                 >
@@ -1764,7 +1427,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Door-Installation"
+                                    href="service-Door-Installation"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Door Installation</a
                                 >
@@ -1772,7 +1435,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Sod-Installation"
+                                    href="service-Sod-Installation"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Sod Installation</a
                                 >
@@ -1780,7 +1443,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Cedar-Shake-Restoration"
+                                    href="service-Cedar-Shake-Restoration"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Cedar Shake Restoration</a
                                 >
@@ -1788,7 +1451,7 @@
                             
                             <li>
                                 <a
-                                    href="service-service-Christmas-Light-Installation"
+                                    href="service-Christmas-Light-Installation"
                                     class="p-1 text-base text-gray-500 rounded hover:text-gray-900 focus:ring-2 focus:outline-none ring-primary ring-opacity-75"
                                     >Christmas Light Installation</a
                                 >
@@ -1958,7 +1621,7 @@
                 <!-- Header -->
                 <div class="relative px-6 bg-white">
                     <!-- Title -->
-                    <h2 class="mt-16 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
+                    <h2 class="mt-6 text-lg font-medium text-center" :id="$id('modal-title')">Send us a text</h2>
                     <!-- Small overlay for scrolling area  -->
                     <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8 bg-gradient-to-b from-white"></div>
                     <button
@@ -2021,7 +1684,7 @@
                                 placeholder="Address"
                             />
                         </div>
-                        <!-- Preferred date of service -->
+                        <!-- Preferred date of service
                         <div>
                             <label for="contact-date" class="sr-only">Preferred Date of Service</label>
                             <input
@@ -2031,9 +1694,9 @@
                                 class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
                                 placeholder="Preferred Date of Service"
                             />
-                        </div>
+                        </div> -->
                         <!-- Promo Code -->
-                        <div>
+                        <!-- <div>
                             <label for="contact-promo-code" class="sr-only">Promo Code</label>
                             <input
                                 type="text"
@@ -2042,7 +1705,7 @@
                                 class="block w-full border-gray-300 py-2.5 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm"
                                 placeholder="Promo Code"
                             />
-                        </div>
+                        </div> -->
                         <!-- How can we help you? (Concern) -->
                         <div>
                             <label for="contact-concern" class="sr-only">How can we help you?</label>
@@ -2062,142 +1725,142 @@
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90096"
-                                            name="90096"
+                                            id="contact-service-90310"
+                                            name="90310"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90096" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                        <label for="contact-label-service-90310" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90097"
-                                            name="90097"
+                                            id="contact-service-90311"
+                                            name="90311"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90097" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                        <label for="contact-label-service-90311" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90098"
-                                            name="90098"
+                                            id="contact-service-90312"
+                                            name="90312"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90098" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                        <label for="contact-label-service-90312" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90099"
-                                            name="90099"
+                                            id="contact-service-90313"
+                                            name="90313"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90099" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                        <label for="contact-label-service-90313" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90100"
-                                            name="90100"
+                                            id="contact-service-90314"
+                                            name="90314"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90100" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                        <label for="contact-label-service-90314" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90101"
-                                            name="90101"
+                                            id="contact-service-90315"
+                                            name="90315"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90101" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
+                                        <label for="contact-label-service-90315" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90102"
-                                            name="90102"
+                                            id="contact-service-90316"
+                                            name="90316"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90102" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
+                                        <label for="contact-label-service-90316" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90103"
-                                            name="90103"
+                                            id="contact-service-90317"
+                                            name="90317"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90103" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
+                                        <label for="contact-label-service-90317" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90104"
-                                            name="90104"
+                                            id="contact-service-90318"
+                                            name="90318"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90104" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
+                                        <label for="contact-label-service-90318" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90105"
-                                            name="90105"
+                                            id="contact-service-90319"
+                                            name="90319"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90105" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
+                                        <label for="contact-label-service-90319" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90106"
-                                            name="90106"
+                                            id="contact-service-90320"
+                                            name="90320"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90106" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
+                                        <label for="contact-label-service-90320" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90107"
-                                            name="90107"
+                                            id="contact-service-90321"
+                                            name="90321"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90107" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
+                                        <label for="contact-label-service-90321" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90108"
-                                            name="90108"
+                                            id="contact-service-90322"
+                                            name="90322"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90108" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
+                                        <label for="contact-label-service-90322" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
                                     </div>
                                 
                                     <div class="flex items-center">
                                         <input
-                                            id="contact-service-90109"
-                                            name="90109"
+                                            id="contact-service-90323"
+                                            name="90323"
                                             type="checkbox"
                                             class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         />
-                                        <label for="contact-label-service-90109" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
+                                        <label for="contact-label-service-90323" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
                                     </div>
                                 
                             </div>
