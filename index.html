@@ -1280,7 +1280,7 @@
     <div
         x-data="{
         activeImage: 1,
-        amountOfImages: 3,
+        amountOfImages: 4,
         loop() {
             setInterval(() => { this.activeImage = this.activeImage === this.amountOfImages ? 1 : this.activeImage + 1 }, 5000)
         },
@@ -1338,7 +1338,7 @@
         >
             <img
                 class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
-                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/3af85aff-071e-4128-adb8-98a98f0c8cdc.png"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg"
                 loading="lazy"
                 alt="Painting &amp; Landscape company Perben Painting and Landscape LLC in Burlington, WA"
             />
@@ -1365,6 +1365,24 @@
         <div
             class="absolute inset-0"
             x-show="activeImage === 3"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="transform translate-x-full"
+            x-transition:enter-end="transform translate-x-0"
+            x-transition:leave="transition duration-1000"
+            x-transition:leave-start="transform"
+            x-transition:leave-end="transform -translate-x-full"
+        >
+            <img
+                class="object-cover w-full h-72 md:h-96 lg:w-full lg:h-full"
+                src="https://landing-page-app-hero-images.s3.amazonaws.com/media/a282fb40-20a2-4a16-bf0a-a2491657b9f7.jpeg"
+                loading="lazy"
+                alt="Painting &amp; Landscape company Perben Painting and Landscape LLC in Burlington, WA"
+            />
+        </div>
+        
+        <div
+            class="absolute inset-0"
+            x-show="activeImage === 4"
             x-transition:enter="transition duration-1000"
             x-transition:enter-start="transform translate-x-full"
             x-transition:enter-end="transform translate-x-0"
@@ -1467,7 +1485,7 @@
                               
                                   
                                       <img 
-                                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/05f536b0-2b23-4a9b-a83d-48bc13dfe023.jpeg"
+                                        src="https://landing-page-app-hero-images.s3.amazonaws.com/media/801e77d3-3911-4e88-b661-a078f9176599.jpeg"
                                         alt="Perben Painting and Landscape LLC team in Burlington, WA - people or person"
                                         class="w-auto h-auto max-h-full max-w-full"
                                         loading="lazy"
@@ -2645,7 +2663,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 32,
+        amountOfImages: 45,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -2666,6 +2684,69 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
                     <button @click="activeImage = 0; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/651d9d0b-4421-4943-aa44-b735d17ea369.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/651d9d0b-4421-4943-aa44-b735d17ea369.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/651d9d0b-4421-4943-aa44-b735d17ea369.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/651d9d0b-4421-4943-aa44-b735d17ea369.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0ab40ef3-7bd2-439b-beb1-786491f6f187.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/0ab40ef3-7bd2-439b-beb1-786491f6f187.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0ab40ef3-7bd2-439b-beb1-786491f6f187.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/0ab40ef3-7bd2-439b-beb1-786491f6f187.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3d0c5b92-cdf4-4121-8aef-2ea89557f445.png" alt="" /> -->
                              
                                 <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/3d0c5b92-cdf4-4121-8aef-2ea89557f445.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
@@ -2685,7 +2766,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 1; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/71284a74-c452-431b-a6bb-ca91d51df42d.jpeg" alt="" /> -->
                              
@@ -2704,9 +2785,9 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             </li>
         
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 2; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e946f2d0-cc62-4787-a779-cbe3ca377c0e.jpeg" alt="" /> -->
                              
@@ -2725,36 +2806,15 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             </li>
         
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 3; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
                              
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 4; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
                             
                         </div>
 
@@ -2769,7 +2829,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 5; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0d89e0bf-b60f-4a43-84a2-26151b161f92.png" alt="" /> -->
                              
@@ -2788,9 +2848,72 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             </li>
         
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 6; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ab4cbd9-ec89-4519-bc77-e04b18f77eab.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6ab4cbd9-ec89-4519-bc77-e04b18f77eab.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ab4cbd9-ec89-4519-bc77-e04b18f77eab.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/6ab4cbd9-ec89-4519-bc77-e04b18f77eab.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3334b006-7b42-4603-80ce-0276bf8d698e.png" alt="" /> -->
                              
@@ -2809,9 +2932,9 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             </li>
         
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden sm:block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 7; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/08c830bb-fd5e-4814-972e-84ad71c474d2.png" alt="" /> -->
                              
@@ -2830,9 +2953,9 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             </li>
         
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 8; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/dd1a4100-fdf3-4e04-ac2e-7ea5cae54bcc.png" alt="" /> -->
                              
@@ -2853,28 +2976,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 9; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
-                        <div class="aspect-w-3 aspect-h-2">
-                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
-                             
-                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
-                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="" /> -->
-                            
-                        </div>
-
-                        <div class="space-y-1 text-lg font-medium leading-6">
-                            <p class="line-clamp-3"></p>
-                            <h3 class="text-primary"></h3>
-                        </div>
-                    </button>
-                </div>
-            </li>
-        
-            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
-            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
-                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 10; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/57502742-7403-4e0d-a443-19159075c988.png" alt="" /> -->
                              
@@ -2895,7 +2997,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 11; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/102e1976-f405-459d-8aae-05f6e4170c57.png" alt="" /> -->
                              
@@ -2916,7 +3018,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 12; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 16; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1673f92d-9d3e-4333-aa0c-f4ac041ab838.png" alt="" /> -->
                              
@@ -2937,7 +3039,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 13; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 17; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/33952f07-8215-4236-9ee9-476a6431ccf3.png" alt="" /> -->
                              
@@ -2958,7 +3060,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 14; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 18; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0dec2383-e607-4d82-9103-ddf64aaa0185.png" alt="" /> -->
                              
@@ -2979,7 +3081,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 15; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 19; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a666c0d1-63e5-4795-b0f8-4850daa38e92.png" alt="" /> -->
                              
@@ -3000,7 +3102,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 16; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 20; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/cd12e460-e9b8-4f57-9926-fea043384a25.png" alt="" /> -->
                              
@@ -3021,7 +3123,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 17; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 21; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/01cc48a8-b846-412e-ac71-4bb63e52475d.png" alt="" /> -->
                              
@@ -3042,7 +3144,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 18; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 22; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a282fb40-20a2-4a16-bf0a-a2491657b9f7.jpeg" alt="" /> -->
                              
@@ -3063,7 +3165,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 19; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 23; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f1eae14e-3272-465e-92a8-07c4690db38f.png" alt="" /> -->
                              
@@ -3084,7 +3186,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 20; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3c754031-5f43-47a1-847c-9ab02b94a49b.png" alt="" /> -->
                              
@@ -3105,7 +3207,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 21; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 25; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b0664bd0-e450-483e-a7bc-42848a5cc726.jpeg" alt="" /> -->
                              
@@ -3126,7 +3228,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 22; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 26; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2415c838-da90-4f86-a14f-3672a487451c.jpeg" alt="" /> -->
                              
@@ -3147,7 +3249,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 23; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 27; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f9683968-7f52-4ae9-8ab3-c5492ea44606.jpeg" alt="" /> -->
                              
@@ -3168,7 +3270,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 24; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 28; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b3d0533b-9633-4020-9a39-3180669b8d52.jpeg" alt="" /> -->
                              
@@ -3189,7 +3291,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 25; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 29; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f2afee75-bfb5-4cdb-993c-a046603579cb.jpeg" alt="" /> -->
                              
@@ -3210,7 +3312,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 26; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 30; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fb006414-435b-4f82-ad4c-127cf04cf411.jpeg" alt="" /> -->
                              
@@ -3231,7 +3333,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 27; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 31; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3e7570d7-5359-4f89-9fae-3c42d356f8a8.jpeg" alt="" /> -->
                              
@@ -3252,7 +3354,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 28; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 32; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/12975df2-62cd-45ab-86f2-ec5154fecf64.jpeg" alt="" /> -->
                              
@@ -3273,7 +3375,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 29; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 33; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9914da93-73f5-4048-b13b-77280e108d55.jpeg" alt="" /> -->
                              
@@ -3294,7 +3396,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 30; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 34; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7c5864f9-b385-41af-9e9b-df344618dcf4.jpeg" alt="" /> -->
                              
@@ -3315,13 +3417,202 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
             <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
             <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
                 <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                    <button @click="activeImage = 31; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                    <button @click="activeImage = 35; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
                         <div class="aspect-w-3 aspect-h-2">
                             <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a58e3526-49b7-4976-828f-9a194c8aa768.jpeg" alt="" /> -->
                              
                                 <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/a58e3526-49b7-4976-828f-9a194c8aa768.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
                                 <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a58e3526-49b7-4976-828f-9a194c8aa768.jpeg" alt="" /> -->
                                 <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/a58e3526-49b7-4976-828f-9a194c8aa768.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 36; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ee4b578-22d9-4506-b5fa-4123603c9a83.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/6ee4b578-22d9-4506-b5fa-4123603c9a83.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ee4b578-22d9-4506-b5fa-4123603c9a83.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/6ee4b578-22d9-4506-b5fa-4123603c9a83.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 37; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7eb06ff8-49eb-4746-b8ed-63041fb1a4ec.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/7eb06ff8-49eb-4746-b8ed-63041fb1a4ec.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7eb06ff8-49eb-4746-b8ed-63041fb1a4ec.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/7eb06ff8-49eb-4746-b8ed-63041fb1a4ec.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 38; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ee68bdb2-5aac-4141-b04f-de18c7d9e135.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/ee68bdb2-5aac-4141-b04f-de18c7d9e135.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ee68bdb2-5aac-4141-b04f-de18c7d9e135.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/ee68bdb2-5aac-4141-b04f-de18c7d9e135.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 39; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b2538353-e455-46a6-9dda-6fb10e375cb7.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/b2538353-e455-46a6-9dda-6fb10e375cb7.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b2538353-e455-46a6-9dda-6fb10e375cb7.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/b2538353-e455-46a6-9dda-6fb10e375cb7.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 40; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/982b9459-a652-4d2a-90bd-449687c7e66e.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/982b9459-a652-4d2a-90bd-449687c7e66e.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/982b9459-a652-4d2a-90bd-449687c7e66e.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/982b9459-a652-4d2a-90bd-449687c7e66e.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 41; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d9e16aed-69c1-4d15-816a-a9ebc1b1d322.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/d9e16aed-69c1-4d15-816a-a9ebc1b1d322.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d9e16aed-69c1-4d15-816a-a9ebc1b1d322.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/d9e16aed-69c1-4d15-816a-a9ebc1b1d322.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 42; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628e4f47-4d98-4af9-bfbb-a41f6b449aa1.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/628e4f47-4d98-4af9-bfbb-a41f6b449aa1.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628e4f47-4d98-4af9-bfbb-a41f6b449aa1.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/628e4f47-4d98-4af9-bfbb-a41f6b449aa1.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 43; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1a9f90f7-c5b4-48f1-98ae-3fa093f1b3ee.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/1a9f90f7-c5b4-48f1-98ae-3fa093f1b3ee.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1a9f90f7-c5b4-48f1-98ae-3fa093f1b3ee.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/1a9f90f7-c5b4-48f1-98ae-3fa093f1b3ee.jpeg" alt="" /> -->
+                            
+                        </div>
+
+                        <div class="space-y-1 text-lg font-medium leading-6">
+                            <p class="line-clamp-3"></p>
+                            <h3 class="text-primary"></h3>
+                        </div>
+                    </button>
+                </div>
+            </li>
+        
+            <!-- Single Item - We only want to show 3 items on mobile so we check the current index and attach a hidden class if necessary -->
+            <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" hidden ">
+                <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
+                    <button @click="activeImage = 44; galleryModalOpen = true" class="block w-full h-full space-y-4 text-left rounded focus:outline-none focus-visible:ring ring-primary ring-offset-2 ring-opacity-75">
+                        <div class="aspect-w-3 aspect-h-2">
+                            <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/27af5f41-fa40-4f35-89b4-95d95ba16350.jpeg" alt="" /> -->
+                             
+                                <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/media/27af5f41-fa40-4f35-89b4-95d95ba16350.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/> 
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/27af5f41-fa40-4f35-89b4-95d95ba16350.jpeg" alt="" /> -->
+                                <!-- <img class="object-cover rounded-lg shadow-lg" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/x/media/27af5f41-fa40-4f35-89b4-95d95ba16350.jpeg" alt="" /> -->
                             
                         </div>
 
@@ -3384,7 +3675,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 0">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3d0c5b92-cdf4-4121-8aef-2ea89557f445.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/651d9d0b-4421-4943-aa44-b735d17ea369.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3392,7 +3683,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 1">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/71284a74-c452-431b-a6bb-ca91d51df42d.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/953bdbc0-ca41-4c3a-af84-54dc8722871c.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3400,7 +3691,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 2">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e946f2d0-cc62-4787-a779-cbe3ca377c0e.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0ab40ef3-7bd2-439b-beb1-786491f6f187.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3408,7 +3699,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 3">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3d0c5b92-cdf4-4121-8aef-2ea89557f445.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3416,7 +3707,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 4">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/71284a74-c452-431b-a6bb-ca91d51df42d.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3424,7 +3715,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 5">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0d89e0bf-b60f-4a43-84a2-26151b161f92.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/e946f2d0-cc62-4787-a779-cbe3ca377c0e.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3432,7 +3723,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 6">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3334b006-7b42-4603-80ce-0276bf8d698e.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3440,7 +3731,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 7">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/08c830bb-fd5e-4814-972e-84ad71c474d2.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0d89e0bf-b60f-4a43-84a2-26151b161f92.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3448,7 +3739,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 8">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/dd1a4100-fdf3-4e04-ac2e-7ea5cae54bcc.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ab4cbd9-ec89-4519-bc77-e04b18f77eab.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3456,7 +3747,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 9">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fc8da8d1-728b-41f1-b20e-f24eea4c9589.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/5b1090e3-a640-4078-ad35-a245cfb07e87.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3464,7 +3755,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 10">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/57502742-7403-4e0d-a443-19159075c988.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/eb33df98-242d-40cf-beea-83410e878c5c.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3472,7 +3763,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 11">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/102e1976-f405-459d-8aae-05f6e4170c57.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3334b006-7b42-4603-80ce-0276bf8d698e.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3480,7 +3771,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 12">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1673f92d-9d3e-4333-aa0c-f4ac041ab838.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/08c830bb-fd5e-4814-972e-84ad71c474d2.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3488,7 +3779,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 13">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/33952f07-8215-4236-9ee9-476a6431ccf3.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/dd1a4100-fdf3-4e04-ac2e-7ea5cae54bcc.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3496,7 +3787,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 14">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0dec2383-e607-4d82-9103-ddf64aaa0185.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/57502742-7403-4e0d-a443-19159075c988.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3504,7 +3795,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 15">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a666c0d1-63e5-4795-b0f8-4850daa38e92.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/102e1976-f405-459d-8aae-05f6e4170c57.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3512,7 +3803,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 16">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/cd12e460-e9b8-4f57-9926-fea043384a25.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1673f92d-9d3e-4333-aa0c-f4ac041ab838.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3520,7 +3811,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 17">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/01cc48a8-b846-412e-ac71-4bb63e52475d.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/33952f07-8215-4236-9ee9-476a6431ccf3.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3528,7 +3819,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 18">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a282fb40-20a2-4a16-bf0a-a2491657b9f7.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/0dec2383-e607-4d82-9103-ddf64aaa0185.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3536,7 +3827,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 19">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f1eae14e-3272-465e-92a8-07c4690db38f.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a666c0d1-63e5-4795-b0f8-4850daa38e92.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3544,7 +3835,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 20">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3c754031-5f43-47a1-847c-9ab02b94a49b.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/cd12e460-e9b8-4f57-9926-fea043384a25.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3552,7 +3843,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 21">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b0664bd0-e450-483e-a7bc-42848a5cc726.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/01cc48a8-b846-412e-ac71-4bb63e52475d.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3560,7 +3851,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 22">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2415c838-da90-4f86-a14f-3672a487451c.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a282fb40-20a2-4a16-bf0a-a2491657b9f7.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3568,7 +3859,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 23">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f9683968-7f52-4ae9-8ab3-c5492ea44606.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f1eae14e-3272-465e-92a8-07c4690db38f.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3576,7 +3867,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 24">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b3d0533b-9633-4020-9a39-3180669b8d52.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3c754031-5f43-47a1-847c-9ab02b94a49b.png" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3584,7 +3875,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 25">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f2afee75-bfb5-4cdb-993c-a046603579cb.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b0664bd0-e450-483e-a7bc-42848a5cc726.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3592,7 +3883,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 26">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fb006414-435b-4f82-ad4c-127cf04cf411.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/2415c838-da90-4f86-a14f-3672a487451c.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3600,7 +3891,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 27">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3e7570d7-5359-4f89-9fae-3c42d356f8a8.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f9683968-7f52-4ae9-8ab3-c5492ea44606.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3608,7 +3899,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 28">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/12975df2-62cd-45ab-86f2-ec5154fecf64.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b3d0533b-9633-4020-9a39-3180669b8d52.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3616,7 +3907,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 29">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9914da93-73f5-4048-b13b-77280e108d55.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/f2afee75-bfb5-4cdb-993c-a046603579cb.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3624,7 +3915,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 30">
                                             
-                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7c5864f9-b385-41af-9e9b-df344618dcf4.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/fb006414-435b-4f82-ad4c-127cf04cf411.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -3632,7 +3923,111 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                     <!-- Transition Wrapper 1 -->
                                     <li class="flex flex-col" x-show="activeImage === 31">
                                             
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/3e7570d7-5359-4f89-9fae-3c42d356f8a8.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 32">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/12975df2-62cd-45ab-86f2-ec5154fecf64.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 33">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/9914da93-73f5-4048-b13b-77280e108d55.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 34">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7c5864f9-b385-41af-9e9b-df344618dcf4.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 35">
+                                            
                                             <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/a58e3526-49b7-4976-828f-9a194c8aa768.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 36">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/6ee4b578-22d9-4506-b5fa-4123603c9a83.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 37">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/7eb06ff8-49eb-4746-b8ed-63041fb1a4ec.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 38">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/ee68bdb2-5aac-4141-b04f-de18c7d9e135.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 39">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/b2538353-e455-46a6-9dda-6fb10e375cb7.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 40">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/982b9459-a652-4d2a-90bd-449687c7e66e.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 41">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/d9e16aed-69c1-4d15-816a-a9ebc1b1d322.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 42">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/628e4f47-4d98-4af9-bfbb-a41f6b449aa1.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 43">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/1a9f90f7-c5b4-48f1-98ae-3fa093f1b3ee.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
+                                            <p lorem="1" class="mt-3 text-gray-500"></p>
+                                        
+                                    </li>
+                                
+                                    <!-- Transition Wrapper 1 -->
+                                    <li class="flex flex-col" x-show="activeImage === 44">
+                                            
+                                            <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/684x480/media/27af5f41-fa40-4f35-89b4-95d95ba16350.jpeg" alt="Interior Painting for Perben Painting and Landscape LLC in Burlington, WA" loading="lazy"/>
                                             <p lorem="1" class="mt-3 text-gray-500"></p>
                                         
                                     </li>
@@ -4080,7 +4475,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="65324"
+                                aria-controls="65327"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">What&#x27;s the best way to reach you?</span>
@@ -4100,7 +4495,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65324">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65327">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Give us a call or send us a text at +1 360-544-2770. Thanks!</p>
                         </dd>
@@ -4113,7 +4508,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="65325"
+                                aria-controls="65328"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">Do you provide free estimates?</span>
@@ -4133,7 +4528,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65325">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65328">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">Yes, we&#x27;ll always estimate the job for free. Just give us a call to get started.</p>
                         </dd>
@@ -4146,7 +4541,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 type="button"
                                 @click="expanded = !expanded"
                                 class="flex items-start justify-between w-full text-left text-white rounded  focus:outline-none focus-visible:ring-2 ring-white"
-                                aria-controls="65326"
+                                aria-controls="65329"
                                 :aria-expanded="expanded"
                             >
                             <span class="font-medium text-white">How are you different?</span>
@@ -4166,7 +4561,7 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                 </span>
                             </button>
                         </dt>
-                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65326">
+                        <dd x-show="expanded" x-cloak x-collapse class="pr-12" id="65329">
                             <div aria-hidden="true" class="invisible h-2"></div>
                             <p class="mt-2 text-base text-gray-100">We&#x27;re a customer-first company that will do whatever it takes to make sure the job is well done.</p>
                         </dd>
@@ -4448,6 +4843,14 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                           
                           
                           
+                          
+                          <li>
+                              <a
+                                  href='sitemap.xml'
+                                  class="p-1 text-base text-gray-100 rounded hover:text-gray-300 focus:ring-2 focus:outline-none ring-white ring-opacity-75"
+                                  >Sitemap</a
+                              >
+                          </li>
                           
                       </ul>
                   </div>
@@ -4793,156 +5196,156 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207981"
-                                                    name="207981"
+                                                    id="contact-service-207995"
+                                                    name="207995"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting"
                                             />
-                                            <label for="contact-label-service-207981" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            <label for="contact-label-service-207995" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207982"
-                                                    name="207982"
+                                                    id="contact-service-207996"
+                                                    name="207996"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-207982" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-207996" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207983"
-                                                    name="207983"
+                                                    id="contact-service-207997"
+                                                    name="207997"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-207983" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-207997" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207984"
-                                                    name="207984"
+                                                    id="contact-service-207998"
+                                                    name="207998"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-207984" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-207998" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207985"
-                                                    name="207985"
+                                                    id="contact-service-207999"
+                                                    name="207999"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-207985" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-207999" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207986"
-                                                    name="207986"
+                                                    id="contact-service-208000"
+                                                    name="208000"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Landscaping"
                                             />
-                                            <label for="contact-label-service-207986" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
+                                            <label for="contact-label-service-208000" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207987"
-                                                    name="207987"
+                                                    id="contact-service-208001"
+                                                    name="208001"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Roof Cleaning"
                                             />
-                                            <label for="contact-label-service-207987" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
+                                            <label for="contact-label-service-208001" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207988"
-                                                    name="207988"
+                                                    id="contact-service-208002"
+                                                    name="208002"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Gutter Cleaning"
                                             />
-                                            <label for="contact-label-service-207988" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
+                                            <label for="contact-label-service-208002" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207989"
-                                                    name="207989"
+                                                    id="contact-service-208003"
+                                                    name="208003"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fence Installation"
                                             />
-                                            <label for="contact-label-service-207989" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
+                                            <label for="contact-label-service-208003" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207990"
-                                                    name="207990"
+                                                    id="contact-service-208004"
+                                                    name="208004"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mulch Removal and Installation"
                                             />
-                                            <label for="contact-label-service-207990" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
+                                            <label for="contact-label-service-208004" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207991"
-                                                    name="207991"
+                                                    id="contact-service-208005"
+                                                    name="208005"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Door Installation"
                                             />
-                                            <label for="contact-label-service-207991" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
+                                            <label for="contact-label-service-208005" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207992"
-                                                    name="207992"
+                                                    id="contact-service-208006"
+                                                    name="208006"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Sod Installation"
                                             />
-                                            <label for="contact-label-service-207992" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
+                                            <label for="contact-label-service-208006" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207993"
-                                                    name="207993"
+                                                    id="contact-service-208007"
+                                                    name="208007"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Cedar Shake Restoration"
                                             />
-                                            <label for="contact-label-service-207993" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
+                                            <label for="contact-label-service-208007" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207994"
-                                                    name="207994"
+                                                    id="contact-service-208008"
+                                                    name="208008"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Christmas Light Installation"
                                             />
-                                            <label for="contact-label-service-207994" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
+                                            <label for="contact-label-service-208008" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
                                         </div>
                                         
                                     </div>
@@ -4973,156 +5376,156 @@ Our Guarantee: Expert quality every time. We don&#x27;t consider a job done unti
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207981"
-                                                    name="207981"
+                                                    id="contact-service-207995"
+                                                    name="207995"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Interior Painting"
                                             />
-                                            <label for="contact-label-service-207981" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
+                                            <label for="contact-label-service-207995" class="ml-3 text-sm font-medium text-gray-700">Interior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207982"
-                                                    name="207982"
+                                                    id="contact-service-207996"
+                                                    name="207996"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Exterior Painting"
                                             />
-                                            <label for="contact-label-service-207982" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
+                                            <label for="contact-label-service-207996" class="ml-3 text-sm font-medium text-gray-700">Exterior Painting</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207983"
-                                                    name="207983"
+                                                    id="contact-service-207997"
+                                                    name="207997"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Kitchen and Cabinet Refinishing"
                                             />
-                                            <label for="contact-label-service-207983" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
+                                            <label for="contact-label-service-207997" class="ml-3 text-sm font-medium text-gray-700">Kitchen and Cabinet Refinishing</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207984"
-                                                    name="207984"
+                                                    id="contact-service-207998"
+                                                    name="207998"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Drywall and Plastering"
                                             />
-                                            <label for="contact-label-service-207984" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
+                                            <label for="contact-label-service-207998" class="ml-3 text-sm font-medium text-gray-700">Drywall and Plastering</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207985"
-                                                    name="207985"
+                                                    id="contact-service-207999"
+                                                    name="207999"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Other Painting Services"
                                             />
-                                            <label for="contact-label-service-207985" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
+                                            <label for="contact-label-service-207999" class="ml-3 text-sm font-medium text-gray-700">Other Painting Services</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207986"
-                                                    name="207986"
+                                                    id="contact-service-208000"
+                                                    name="208000"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Landscaping"
                                             />
-                                            <label for="contact-label-service-207986" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
+                                            <label for="contact-label-service-208000" class="ml-3 text-sm font-medium text-gray-700">Landscaping</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207987"
-                                                    name="207987"
+                                                    id="contact-service-208001"
+                                                    name="208001"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Roof Cleaning"
                                             />
-                                            <label for="contact-label-service-207987" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
+                                            <label for="contact-label-service-208001" class="ml-3 text-sm font-medium text-gray-700">Roof Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207988"
-                                                    name="207988"
+                                                    id="contact-service-208002"
+                                                    name="208002"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Gutter Cleaning"
                                             />
-                                            <label for="contact-label-service-207988" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
+                                            <label for="contact-label-service-208002" class="ml-3 text-sm font-medium text-gray-700">Gutter Cleaning</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207989"
-                                                    name="207989"
+                                                    id="contact-service-208003"
+                                                    name="208003"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Fence Installation"
                                             />
-                                            <label for="contact-label-service-207989" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
+                                            <label for="contact-label-service-208003" class="ml-3 text-sm font-medium text-gray-700">Fence Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207990"
-                                                    name="207990"
+                                                    id="contact-service-208004"
+                                                    name="208004"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Mulch Removal and Installation"
                                             />
-                                            <label for="contact-label-service-207990" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
+                                            <label for="contact-label-service-208004" class="ml-3 text-sm font-medium text-gray-700">Mulch Removal and Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207991"
-                                                    name="207991"
+                                                    id="contact-service-208005"
+                                                    name="208005"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Door Installation"
                                             />
-                                            <label for="contact-label-service-207991" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
+                                            <label for="contact-label-service-208005" class="ml-3 text-sm font-medium text-gray-700">Door Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207992"
-                                                    name="207992"
+                                                    id="contact-service-208006"
+                                                    name="208006"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Sod Installation"
                                             />
-                                            <label for="contact-label-service-207992" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
+                                            <label for="contact-label-service-208006" class="ml-3 text-sm font-medium text-gray-700">Sod Installation</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207993"
-                                                    name="207993"
+                                                    id="contact-service-208007"
+                                                    name="208007"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Cedar Shake Restoration"
                                             />
-                                            <label for="contact-label-service-207993" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
+                                            <label for="contact-label-service-208007" class="ml-3 text-sm font-medium text-gray-700">Cedar Shake Restoration</label>
                                         </div>
                                         
                                         <div class="flex items-center">
                                             <input
-                                                    id="contact-service-207994"
-                                                    name="207994"
+                                                    id="contact-service-208008"
+                                                    name="208008"
                                                     type="checkbox"
                                                     class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                                     value="Christmas Light Installation"
                                             />
-                                            <label for="contact-label-service-207994" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
+                                            <label for="contact-label-service-208008" class="ml-3 text-sm font-medium text-gray-700">Christmas Light Installation</label>
                                         </div>
                                         
                                     </div>
