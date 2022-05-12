@@ -32,20 +32,6 @@
     </url>
 
     <url>
-        <loc>https://perbenpainting.com/gallery-Interior-Painting</loc>
-        <lastmod>2022-05-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://perbenpainting.com/gallery-Exterior-Painting</loc>
-        <lastmod>2022-05-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://perbenpainting.com/gallery-Landscaping</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
@@ -81,7 +67,14 @@
     </url>
 
     <url>
-        <loc>https://perbenpainting.com/service-Interior-Painting</loc>
+        <loc>https://perbenpainting.com/gallery-Interior-Painting</loc>
+        <lastmod>2022-05-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://perbenpainting.com/gallery-Exterior-Painting</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -89,6 +82,13 @@
 
     <url>
         <loc>https://perbenpainting.com/service-Exterior-Painting</loc>
+        <lastmod>2022-05-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://perbenpainting.com/service-Interior-Painting</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -109,14 +109,14 @@
     </url>
 
     <url>
-        <loc>https://perbenpainting.com/service-Other-Painting-Services</loc>
+        <loc>https://perbenpainting.com/service-Landscaping</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://perbenpainting.com/service-Landscaping</loc>
+        <loc>https://perbenpainting.com/service-Other-Painting-Services</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -151,6 +151,13 @@
     </url>
 
     <url>
+        <loc>https://perbenpainting.com/service-Cedar-Shake-Restoration</loc>
+        <lastmod>2022-05-12</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
         <loc>https://perbenpainting.com/service-Door-Installation</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
@@ -159,13 +166,6 @@
 
     <url>
         <loc>https://perbenpainting.com/service-Sod-Installation</loc>
-        <lastmod>2022-05-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://perbenpainting.com/service-Cedar-Shake-Restoration</loc>
         <lastmod>2022-05-12</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
